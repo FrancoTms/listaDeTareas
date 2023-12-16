@@ -1,0 +1,135 @@
+/* Selección de colores */
+:root{
+    --primary:#120907; 
+    --secondary:#151b26;
+    --light:#2f4b68;
+    --dark:#4f81b2;
+    --disabled:#6db9e4;
+}
+
+/* Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Body */
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--secondary);
+}
+
+/* Letra */
+*:first-letter{
+    text-transform: capitalize;
+}
+
+/* Borde */
+.roundBorder{
+    border-radius: 5px;
+}
+
+/* Lista */
+.list{
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--primary);
+    width: 100%;
+    max-width: 50%;
+}
+
+/* Fecha */
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dateLeft{
+    display: flex;
+    align-items: center;
+}
+#dateNumber{
+    font-size: 50px;
+}
+#dateText{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+#dateMonth,
+#dateNumber,
+#dateText{
+    font-weight: bold;
+    color: var(--disabled);
+}
+#dateMonth,
+#dateYear{
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+/* Formulario */
+form{
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+input{
+    border: none;
+    padding-left: 10px;
+    background-color: var(--dark);
+    font-weight: bold;
+}
+input::placeholder{
+    color: var(--primary);
+}
+input:focus,
+input:hover{
+    outline: none;
+    background-color: var(--disabled);
+    color: var(--primary);
+}
+button{
+    background-color: var(--disabled);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: .5em;
+}
+.addTaskButton{
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+.addTaskButton:focus,
+.addTaskButton:hover{
+    background-color: var(--secondary);
+    color: var(--disabled);
+}
+.orderButton{
+    background-color: var(--secondary);
+    color: var(--disabled);
+}
+.orderButton:focus,
+.orderButton:hover{
+    background-color: var(--disabled);
+    color: var(--primary);
+}
+
+/* Tareas */
+.task{
+    background-color: var(--secondary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--disabled);
+    cursor: pointer;
+}
+
+/* Tareas hechas */
+.done{
+    background-color: var(--light);
+    text-decoration: line-through;
+    color: var(--dark);
+}
